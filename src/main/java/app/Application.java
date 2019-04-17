@@ -1,12 +1,7 @@
 package app;
 
-import app.exercise.Exercise;
 import app.workout.Results;
 import app.workout.Workout;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sun.corba.se.spi.orbutil.threadpool.Work;
-import org.assertj.core.internal.bytebuddy.matcher.ElementMatcher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -15,12 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.*;
-import org.springframework.util.Assert;
 import org.springframework.web.client.RestTemplate;
-
-import static org.assertj.core.api.Assertions.allOf;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.internal.bytebuddy.matcher.ElementMatchers.is;
 
 import java.util.Collections;
 
