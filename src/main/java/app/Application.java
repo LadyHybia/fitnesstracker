@@ -1,5 +1,6 @@
 package app;
 
+import app.settings.Settings;
 import app.workout.Results;
 import app.workout.Workout;
 import org.slf4j.Logger;
@@ -43,8 +44,11 @@ public class Application {
                     HttpMethod.GET, new HttpEntity<>("parameters", headers), Workout.class);
             ResponseEntity<Results> result = restTemplate.exchange("https://wger.de/api/v2/workout/?format=json",
                     HttpMethod.GET, new HttpEntity<>("parameters", headers), Results.class);
-;
-            log.info(result.getBody().getComment().toString());
+            ResponseEntity<Settings> settings = restTemplate.exchange("https://wger.de/api/v2/userprofile/?format=json",
+                    HttpMethod.GET, new HttpEntity<>("parameters", headers), Settings.class);
+
+            log.info(String.valueOf(workout.getBody().getResults()));
+            log.info(String.valueOf((settings.getBody().getResults())));
 
         };
     }

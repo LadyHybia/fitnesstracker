@@ -48,7 +48,7 @@ public class Workout {
         this.results = results;
     }
 
-    @Override
+   /* @Override
     public String toString() {
         return "daysofweek{" +
                 "count=" + count + '\'' +
@@ -56,5 +56,5 @@ public class Workout {
                 ", previous='" + previous + '\'' +
                 "results=" + results + '\'' +
                 '}';
-    }
+    }*/
 }

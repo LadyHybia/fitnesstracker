@@ -1,11 +1,9 @@
 package app.workout;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Results {
-    @JsonProperty("lower body")
     private String comment;
-
     private Long id;
     private String creation_date;
 
